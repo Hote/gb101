@@ -7,5 +7,4 @@ jobs:
   wireguard_example:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt install wireguard
       - run: curl -vvv http://ifconfig.me
