@@ -1,22 +1,11 @@
-name: Test
-
+name: WireGuard example
 
 on:
-
-  push:
-    branches: [ main ]
-  pull_request: 
-    branches: [ main ]
-    
   workflow_dispatch:
 
-
 jobs:
-  build:
+  wireguard_example:
     runs-on: ubuntu-latest
     steps:
-    
-      - uses: actions/checkout@v2
-      
-      - name: Run a one-line scripts
-        run: echo Hello, world!
+      - run: sudo apt install wireguard
+      - run: curl -vvv http://ifconfig.me
